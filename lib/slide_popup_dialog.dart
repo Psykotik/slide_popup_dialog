@@ -15,6 +15,8 @@ import './slide_dialog.dart';
 /// `pillColor` Color of pill inside dialog. Defaults to Colors.blueGrey[200].
 /// 
 /// `backgroundColor` Color of dialog background. Defaults to Theme.of(context).canvasColor.
+/// 
+/// `heightMultiplicator` Height of the modal in decimal percentage based on screen height. 0.1 => 10% of screen height, 0.66 => 2/3 of screen height.
 Future<T> showSlideDialog<T>({
   @required BuildContext context,
   @required Widget child,
@@ -23,6 +25,7 @@ Future<T> showSlideDialog<T>({
   Duration transitionDuration = const Duration(milliseconds: 300),
   Color pillColor,
   Color backgroundColor,
+  num heightMultiplicator,
 }) {
   assert(context != null);
   assert(child != null);
@@ -43,7 +46,8 @@ Future<T> showSlideDialog<T>({
           child: SlideDialog(
             child: child,
             pillColor: pillColor ?? Colors.blueGrey[200],
-            backgroundColor: backgroundColor ?? Theme.of(context).canvasColor,
+            backgroundColor: backgroundColor ?? Theme.of(context).canvasColor, 
+            heightMultiplicator: heightMultiplicator ?? 1.5,
           ),
         ),
       );

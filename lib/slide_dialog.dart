@@ -6,11 +6,13 @@ class SlideDialog extends StatefulWidget {
   final Widget child;
   final Color backgroundColor;
   final Color pillColor;
+  final num heightMultiplicator;
 
   SlideDialog({
     @required this.child,
     @required this.pillColor,
-    @required this.backgroundColor,
+    @required this.backgroundColor, 
+    @required this.heightMultiplicator,
   });
 
   @override
@@ -40,7 +42,7 @@ class _SlideDialogState extends State<SlideDialog> {
         child: Center(
           child: Container(
             width: deviceWidth,
-            height: deviceHeight / 1.5,
+            height: deviceHeight / widget.heightMultiplicator,
             child: Material(
               color: widget.backgroundColor ??
                   Theme.of(context).dialogBackgroundColor,
