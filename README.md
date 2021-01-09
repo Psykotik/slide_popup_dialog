@@ -6,7 +6,12 @@ Popup dialog with slide mechanism. Use it like AlertDialog or SimpleDialog.
 
 ## How to use
 
-1. Add slide_popup_dialog to your package's pubspec.yaml, then intall it.
+1. Add slide_popup_dialog to your package's pubspec.yaml like that :
+```
+slide_popup_dialog:
+    git:
+      url: https://github.com/Psykotik/slide_popup_dialog
+``` 
 
 2. Import package.
 
