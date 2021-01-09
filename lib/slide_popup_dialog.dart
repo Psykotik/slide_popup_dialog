@@ -16,7 +16,7 @@ import './slide_dialog.dart';
 /// 
 /// `backgroundColor` Color of dialog background. Defaults to Theme.of(context).canvasColor.
 /// 
-/// `heightMultiplicator` Height of the modal in decimal percentage based on screen height. 0.1 => 10% of screen height, 0.66 => 2/3 of screen height.
+/// `heightMultiplicator` Height of the modal in percentage based on screen height. Can be from 0.0 to 2.0 factor, with 1.0 almost the middle of the screen.
 Future<T> showSlideDialog<T>({
   @required BuildContext context,
   @required Widget child,
